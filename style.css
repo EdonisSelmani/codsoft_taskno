@@ -1,69 +1,162 @@
-body {
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* General Styles */
+body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
   }
   
-  .calculator {
-    background-color: #1e90ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 320px;
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
-  .display {
+  h2 {
+    text-align: center;
     margin-bottom: 20px;
   }
   
-  .display input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 5px;
-    text-align: right;
-    background-color: #e6f2ff;
+  /* Header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
-  .buttons {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero .btn {
+    background-color: white;
+    color: #2575fc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero .btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Skills */
+  .skills {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .skills-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .skill {
+    text-align: center;
+  }
+  
+  .skill i {
+    font-size: 3rem;
+    color: #2575fc;
+  }
+  
+  /* Projects */
+  .projects {
+    padding: 50px 0;
+  }
+  
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .project-card {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .project-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .project-card .btn {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  /* Contact */
+  .contact {
+    padding: 50px 0;
+    background-color: #6a11cb;
+    color: white;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
   
-  button {
-    background-color: #4682b4;
+  .contact form input, .contact form textarea {
+    padding: 10px;
     border: none;
     border-radius: 5px;
-    color: #ffffff;
-    font-size: 1.2rem;
-    padding: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    width: 100%;
   }
   
-  button:hover {
-    background-color: #5a9bd3;
+  .contact form button {
+    background-color: white;
+    color: #2575fc;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
   }
   
-  button:active {
-    background-color: #3a78a5;
-  }
-  
-  button.zero {
-    grid-column: span 2;
-  }
-  
-  button:last-child {
-    background-color: #32cd32;
-  }
-  
-  button:last-child:hover {
-    background-color: #3ee13e;
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
   }
   
